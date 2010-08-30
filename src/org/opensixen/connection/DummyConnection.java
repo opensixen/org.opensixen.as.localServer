@@ -20,7 +20,8 @@ public class DummyConnection extends CConnection{
 	 */
 	@Override
 	public boolean isAppsServerOK(boolean tryContactAgain) {
-		return true;
+		// App server is OK when database connection is OK
+		return isDatabaseOK();
 	}
 
 	/* (non-Javadoc)
